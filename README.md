@@ -216,3 +216,32 @@ Allows guests to leave feedback on their stay, which helps maintain quality and 
 To ensure high performance at scale, the project includes indexing of commonly queried fields and caching strategies. These improvements reduce response time and minimize database load, particularly in data-heavy operations like searching and filtering properties.
 
 ________________________________________________________________________________________________________________________________________________
+🔐 API Security
+________________________________________________________________________________________________________________________________________________
+Securing the backend APIs is essential to protect user data, ensure system integrity, and maintain user trust. The following security measures have been implemented in the project:
+
+1. Authentication
+All endpoints that require user identity are protected using secure authentication mechanisms (e.g., JWT tokens or session-based authentication).
+🔒 Why it matters: Ensures that only legitimate users can access their accounts and prevents unauthorized access to sensitive actions like bookings and payments.
+
+2. Authorization
+Role-based access control (RBAC) ensures users can only perform actions allowed by their role (e.g., guest, host, admin).
+🔒 Why it matters: Prevents users from accessing or modifying resources that do not belong to them, such as editing someone else’s property listing or viewing other users’ payment history.
+
+3. Rate Limiting
+Rate limiting is implemented to throttle excessive requests from a single user or IP address.
+🔒 Why it matters: Helps prevent abuse, such as brute-force login attempts or denial-of-service (DoS) attacks, maintaining system availability and responsiveness.
+
+4. Input Validation & Sanitization
+All input data is validated and sanitized to prevent common attacks like SQL injection, XSS, and command injection.
+🔒 Why it matters: Protects the database and users from malicious payloads and corrupt data entries.
+
+5. Secure Payments
+Payment endpoints are protected with additional layers such as HTTPS, token-based authorization, and integration with secure third-party payment gateways.
+🔒 Why it matters: Ensures financial transactions are secure and resistant to interception or manipulation.
+
+6. HTTPS Enforcement
+All API traffic is encrypted using HTTPS to prevent eavesdropping and man-in-the-middle attacks.
+🔒 Why it matters: Keeps sensitive data like passwords, personal info, and payment details confidential during transmission.
+
+______________________________________________________________________________________________________________________________________________

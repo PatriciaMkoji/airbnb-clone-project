@@ -1,6 +1,8 @@
 # airbnb-clone-project
 
+___________________________________________________________________________________________________________________________________________
 📘 Team Roles and Responsibilities
+___________________________________________________________________________________________________________________________________________
 This document outlines the key roles involved in our software development process. Each team member plays a vital part in ensuring that our product is robust, user-centric, and delivered efficiently.
 
 🧠 Business Analyst (BA)
@@ -90,3 +92,27 @@ Key Duties:
 1. Build and maintain CI/CD pipelines.
 2. Monitor deployments and system stability.
 3. Automate infrastructure and support scalable delivery.
+
+______________________________________________________________________________________________________________________________________
+🚀 Technology Stack
+______________________________________________________________________________________________________________________________________
+This project utilizes a modern and scalable technology stack to ensure efficient development, smooth performance, and maintainability.
+
+🔧 Backend & API
+Django: A high-level Python web framework used for building robust, scalable, and secure backend applications.
+Django REST Framework (DRF): An extension of Django that simplifies the creation and management of RESTful APIs, enabling seamless communication between frontend and backend.
+
+🗄️ Database & Query Language
+PostgreSQL: A powerful, open-source relational database system used for secure and structured data storage.
+GraphQL: A flexible query language that allows clients to request only the data they need, improving efficiency over traditional REST calls.
+
+⚙️ Task Management & Caching
+Celery: A distributed task queue for handling asynchronous operations such as sending emails, background data processing, or task scheduling.
+Redis: An in-memory key-value store used for caching, session storage, and as a message broker for Celery tasks.
+
+📦 Containerization & Deployment
+Docker: A containerization tool that packages the application and its dependencies into isolated environments, ensuring consistency across development, staging, and production.
+
+CI/CD Pipelines: Automated processes that streamline the testing, integration, and deployment of code changes, ensuring rapid and reliable delivery.
+
+___________________________________________________________________________________________________________________________________________

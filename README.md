@@ -185,3 +185,34 @@ A Review is written by a User for a Property (many-to-1).
 A Booking can have one corresponding Payment (1-to-1).
 
 _____________________________________________________________________________________________________________________________________________
+🛠️ Feature Breakdown
+_____________________________________________________________________________________________________________________________________________
+This section outlines the core features of the Airbnb Clone project and how each contributes to delivering a seamless booking experience for users.
+
+1. API Documentation
+The backend APIs are documented using the OpenAPI standard, making integration with frontend and third-party systems straightforward and well-structured. Django REST Framework supports full CRUD operations, while GraphQL allows for flexible and precise data queries, enhancing developer experience and performance.
+
+2. User Authentication
+Endpoints: /users/, /users/{user_id}/
+This feature enables secure user registration, login, and profile management. It ensures that only authenticated users can access certain actions such as bookings, property management, and reviews.
+
+3. Property Management
+Endpoints: /properties/, /properties/{property_id}/
+Users (especially hosts) can list, edit, view, and delete rental properties. This feature serves as the foundation of the platform, allowing accommodations to be made visible to potential guests.
+
+4. Booking System
+Endpoints: /bookings/, /bookings/{booking_id}/
+Facilitates the reservation process, allowing users to book available properties, check availability, and manage their stay details. It is tightly integrated with both the property listings and user accounts.
+
+5. Payment Processing
+Endpoints: /payments/
+Handles financial transactions related to bookings. Users can make secure payments, while the system ensures transaction status tracking and linkage to relevant bookings.
+
+6. Review System
+Endpoints: /reviews/, /reviews/{review_id}/
+Allows guests to leave feedback on their stay, which helps maintain quality and trust on the platform. Hosts and future guests benefit from honest reviews and ratings.
+
+7. Database Optimizations
+To ensure high performance at scale, the project includes indexing of commonly queried fields and caching strategies. These improvements reduce response time and minimize database load, particularly in data-heavy operations like searching and filtering properties.
+
+________________________________________________________________________________________________________________________________________________

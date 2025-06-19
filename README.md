@@ -116,3 +116,72 @@ Docker: A containerization tool that packages the application and its dependenci
 CI/CD Pipelines: Automated processes that streamline the testing, integration, and deployment of code changes, ensuring rapid and reliable delivery.
 
 ___________________________________________________________________________________________________________________________________________
+🗃️ Database Design
+___________________________________________________________________________________________________________________________________________
+This section outlines the core entities of the project and their relationships. The database is designed to ensure data integrity, efficient querying, and scalability.
+
+🔹 Entities and Key Fields
+1. Users
+Represents individuals who interact with the platform.
+
+Key Fields:
+id: Unique identifier for each user.
+name: Full name of the user.
+email: Email address (unique).
+password: Hashed password for authentication.
+role: Indicates if the user is a guest, host, or admin.
+
+2. Properties
+Represents real estate listings or rental spaces posted by users.
+
+Key Fields:
+id: Unique property identifier.
+user_id: Foreign key referencing the host (User).
+title: Property name or listing title.
+description: Detailed property information.
+location: Address or coordinates of the property.
+
+3. Bookings
+Represents reservation information for properties by users.
+
+Key Fields:
+id: Unique booking identifier.
+user_id: Foreign key referencing the guest.
+property_id: Foreign key referencing the booked property.
+start_date: Date when the booking starts.
+end_date: Date when the booking ends.
+
+4. Reviews
+Represents feedback left by users for properties.
+
+Key Fields:
+id: Unique review identifier.
+user_id: Foreign key referencing the reviewer.
+property_id: Foreign key referencing the reviewed property.
+rating: Numeric rating (e.g., 1–5).
+comment: Written feedback.
+
+5. Payments
+Represents payment transactions for bookings.
+
+Key Fields:
+id: Unique payment identifier.
+user_id: Foreign key referencing the payer.
+booking_id: Foreign key referencing the related booking.
+amount: Total paid amount.
+status: Payment status (e.g., completed, pending, failed).
+
+🔗 Entity Relationships
+A User can own multiple Properties (1-to-many).
+
+A User can make multiple Bookings (1-to-many).
+
+A Property can have multiple Bookings (1-to-many).
+
+A Booking is linked to one User (guest) and one Property.
+
+A Review is written by a User for a Property (many-to-1).
+
+A Booking can have one corresponding Payment (1-to-1).
+
+_____________________________________________________________________________________________________________________________________________
